@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>放課後等デイサービス ゆう　サイト</title>
+
+    <style>
+        body { margin: 0; display: flex; flex-direction: column; min-height: 100vh; font-family: sans-serif; }
+        header { background: #333; color: white; padding: 5px; text-align: center; }
+        header h1 {margin: 0;}      /* これが一番効きます */
+        img { max-width: 100%; height: auto; }
+        .container { display: flex; flex: 1; }
+        .hero { text-align: center; background: #fffbe6; padding: 40px 0; }
+        .hero-img { border-radius: 20%; }
+
+        .heroh-img {width: 100%;height: 500px;object-fit: cover;}       /* 横幅は画面いっぱいに */
+               /* ここで高さを固定（30pxは極端に細いので、まずは300pxなどで試してください） */
+               /* 指定したサイズに合わせて、画像をいい感じに切り抜いてくれます */
+
+        .katudo-img {width: 30%;height: auto;object-fit: cover;}      /* 横幅は画面いっぱいに */
+                /* ここで高さを固定（30pxは極端に細いので、まずは300pxなどで試してください） */
+                /* 指定したサイズに合わせて、画像をいい感じに切り抜いてくれます */ 
+        /* 左側のサイドバー */
+        aside {
+            width: 260px;background-color: #f9f9f9;border-right: 1px solid #ddd;
+            padding: 20px;
+            /* サイドバー内のコンテンツを縦に並べる設定 */
+            display: flex;flex-direction: column;
+            gap: 30px; /* 各コンテンツ間の隙間を一括設定 */}
+         /* サイドバー内の各コンテンツブロック */
+        .sidebar-content {background: white;padding: 15px;border: 1px solid #eee;border-radius: 5px;}
+        .sidebar-content h3 {margin-top: 0;font-size: 1.1em;}
+        .sidebar-content h3 span {border-bottom: 2px solid #333;padding-bottom: 2px;}
+            /* border-bottom: 2px solid #333; */
+            /* padding-bottom: 5px; */
+            main { flex: 1; padding: 20px; }
+
+       /* 理念全体の設定 */
+      .concept {background-color:padding: 40px; #fff9f0;border-radius: 15px; margin: 20px 0;/* 優しい薄オレンジの背景 */
+               line-height: 2; /* 行間を広くして読みやすく */}
+       /* 「私たちの想い」の見出し */
+      .concept-title {text-align: center;color: #d35400;margin-bottom: 30px;}
+      /* 「遊びは子どもの主食です」を強調 */
+      .highlight-text {font-size: 1.4em;font-weight: bold;color: #e67e22;text-align: center;margin-bottom: 25px;}
+      .concept-body p {text-align: center;color: #333;} /* 文章を中央寄せに */
+      .concept-body strong {color: #e67e22; /* 大事な言葉に色をつける */}
+
+      .photo-grid {display: flex;flex-wrap: wrap;gap: 20px;} /* 隙間を少し広めに設定 */
+      .photo-item {width: calc((100% - 40px) / 3); background: #fff;border: 1px solid #eee;border-radius: 8px;overflow: hidden;box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+       /* 1段に3枚並ぶ計算 */ /* 軽い影でカード風に */
+       /* 写真を入れる箱 */
+      .image-box {width: 100%;aspect-ratio: 4 / 3;overflow: hidden;} /* 高さを揃える */
+      .image-box img {width: 100%;height: 100%;object-fit: cover;}
+       /* 説明文のスタイル */
+      .photo-caption {padding: 10px;margin: 0;font-size: 0.9em;color: #333;text-align: center;font-weight: bold;} /* 文字を中央寄せ */
+      /* スマホ対応：1段に2枚 */
+       @media (max-width: 600px) {.photo-item {width: calc((100% - 20px) / 2);}}
+
+    </style>
+
+</head>
+<body>
+  <header>
+    <h1>放課後等デイサービス ゆう</h1>
+    <!-- 空のdivの代わりにCSSで余白を作ります -->
+    <img src="木の背景にロゴ12-3.jpg" alt="放課後等デイサービス南足柄　ゆう　" class="heroh-img">
+  </header>
+
+    <div class="container">
+        <!-- 左側サイドバー -->
+        <aside>
+            <!-- ブロック1：ナビゲーション -->
+            <div class="sidebar-content">
+                <h3><span>Menu</span></h3>
+                <ul style="padding-left: 20px;">
+                    <li><a href="#section1">私たちの想い</a></li>
+                    <li><a href="#section2">５領域</a></li>
+                    <li><a href="#section3">一日の流れ</a></li>
+                    <li><a href="#section4">活動の様子</a></li>
+                    <li><a href="#section5">施設概要/問合せ</a></li>
+                </ul>
+            </div>
+
+            <!-- ブロック2：最新記事 -->
+            <div class="sidebar-content">
+                <h3><span>Latest News</span></h3>
+                <p style="font-size: 0.9em;">2026/05/01<br>サイトを作成しました。</p>
+            </div>
+
+            <!-- ブロック3：バナー広告風 -->
+            <div class="sidebar-content" style="background-color: #e7f3ff; text-align: center;">
+                <p><strong>広告スペース</strong></p>
+            </div>
+        </aside>
+
+        <main>
+ 
+        <section id="section1">
+
+            <section class="concept">
+            <h2 class="concept-title">私たちの想い</h2>
+            <div class="concept-body">
+                <p class="highlight-text">遊びは子どもの主食です。</p>
+                <p>
+                子どもたちは、様々な遊びを通して自らを成長させていきます。<br>
+                私たちは、子どもたちが自分のペースで自分のことを決めることが出来るように、<br>
+                <strong>意思決定支援</strong>を進めていきます。<br>
+                私たちは、地域に開かれた支援を目指します。
+                </p>
+            </div>
+            </section>
+
+　　　　　<div style="height: auto;"> <!-- 高さを出すためのダミー --> </div> 
+           <img src="you.jpg" alt="YOU" >
+  　    </section>
+
+        <section id="section2">
+           <div style="height: auto;"> <!-- 高さを出すためのダミー --> </div> 
+           <img src="5領域.jpg" alt="YOU" >
+　         </section>
+
+　　　　<section id="section3">
+           <div style="height: auto;"> <!-- 高さを出すためのダミー --> </div> 
+           <img src="一日の流れ.jpg" alt="一日の流れ" >
+　         </section>
+        <section id="section4">
+            <!-- 写真と説明文のエリア -->
+        <div class="photo-grid">
+           <!-- 1枚目 -->
+          <div class="photo-item">
+          <div class="image-box"><img src="アイス作り.jpg" alt="活動の様子"></div>
+          <p class="photo-caption">アイス作り</p>
+          </div>
+           <!-- 2枚目 -->
+          <div class="photo-item">
+          <div class="image-box"><img src="蒼透さん菜陽さん.jpg" alt="活動の様子"></div>
+          <p class="photo-caption">一緒に活動</p>
+          </div>
+　　　　　 <!-- 3枚目 -->
+          <div class="photo-item">
+          <div class="image-box"><img src="優利さん.jpg" alt="活動の様子"></div>
+          <p class="photo-caption">一緒に活動</p>
+          </div>
+　　　　　 <!-- 4枚目 -->
+          <div class="photo-item">
+          <div class="image-box"><img src="菜陽さん.jpg" alt="活動の様子"></div>
+          <p class="photo-caption">活動</p>
+          </div>
+         </div>
+         </section>
+
+        <section id="section5">
+           <h2>施設概要/問合せ</h2>
+         <div class="photo-grid">
+           <!-- 1枚目 -->
+          <div class="photo-item">
+          <img src="地図.jpg" alt="地図">
+          <p class="photo-caption">地図</p>
+           </div>
+           <!-- 2枚目 -->
+          <div class="photo-item">
+          <img src="管理者.jpg" alt="管理者">
+          <p class="photo-caption">TEL: 0465-55-8164（管理者　山﨑歩）</p>
+          </div>
+        </section>
+ 
+        </main>
+    </div>
+
+</body>
+</html>
